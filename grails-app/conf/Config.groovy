@@ -86,10 +86,15 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        mifosx.platform.url ="https://192.168.10.156:8443/mifosng-provider/api/"
+        mifosx.platform.tenantStr ="tenantIdentifier"
+        mifosx.platform.tenantName ="default"
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+        mifosx.platform.url ="https://192.168.10.156:8443/mifosng-provider/api/"
+        mifosx.platform.tenantName ="default"
     }
 }
 
@@ -113,3 +118,31 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.oros.custom.OrosUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.oros.custom.OrosUserOrosRole'
+grails.plugin.springsecurity.authority.className = 'com.oros.custom.OrosRole'
+grails.plugin.springsecurity.requestMap.className = 'com.oros.custom.Requestmap'
+grails.plugin.springsecurity.securityConfigType = 'Requestmap'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/index.gsp':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll']
+]
+
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/login/loginSuccess'
+grails.plugin.springsecurity.successHandler.alwaysUseDefault = true
+//grails.plugin.springsecurity.rejectIfNoRule = false
+//grails.plugin.springsecurity.fii.rejectPublicInvocations = true
+grails.plugin.springsecurity.securityConfigType = "Annotation"
+//grails.plugin.springsecurity.securityConfigType = 'Requestmap'
+
+//By default only POST requests are allowed to trigger a logout. To allow GET access, add this
+grails.plugin.springsecurity.logout.postOnly = true
+
