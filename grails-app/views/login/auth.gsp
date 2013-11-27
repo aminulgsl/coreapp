@@ -18,12 +18,12 @@
                         <div class="center">
                             <h1>
                                 <i class="icon-leaf green"></i>
-                                <span class="red"><g:message code="springSecurity.login.header.title" default="Oroscapital"/></span>
-                                <span class="white"><g:message code="springSecurity.login.header" default=""/></span>
+                                <span class="red"><g:message code="springSecurity.login.header.title" default="OrosCapital"/></span>
+                                %{--<span class="white"><g:message code="springSecurity.login.header" default=""/></span>--}%
 
 
                             </h1>
-                            <h4 class="blue">&copy; <g:message code="springSecurity.login.header.company" default="Company Name"/></h4>
+                            %{--<h4 class="blue">&copy; <g:message code="springSecurity.login.header.company" default="Company Name"/></h4>--}%
                         </div>
                     </div>
 
@@ -51,7 +51,7 @@
                                                 <label for='username' class=" control-label"><g:message code="springSecurity.login.username.label" default="User Name"/>:</label>
                                              <div class=" ">
                                              <span class="block input-icon input-icon-right ">
-                                                    <input type="text" class="span12 form-control" placeholder="Username"  />
+                                                    <input type="text" class="text_ span12 form-control" name='j_username' id='username' placeholder="Username"   />
                                                     <i class="icon-user"></i>
 
                                                 </span>
@@ -64,7 +64,7 @@
                                             <label for='password' class=" control-label"><g:message code="springSecurity.login.password.label" default="Password"/>:</label>
                                                 <div class="">
                                                  <span class="block input-icon input-icon-right">
-                                                    <input type="password" class="span12 form-control" placeholder="Password" />
+                                                    <input type="password" class="text_ span12 form-control" placeholder="Password" name='j_password' id='password' />
                                                     <i class="icon-lock"></i>
                                                  </span>
                                                 </div>

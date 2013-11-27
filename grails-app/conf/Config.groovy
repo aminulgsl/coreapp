@@ -144,5 +144,5 @@ grails.plugin.springsecurity.securityConfigType = "Annotation"
 //grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 
 //By default only POST requests are allowed to trigger a logout. To allow GET access, add this
-grails.plugin.springsecurity.logout.postOnly = true
+grails.plugin.springsecurity.logout.postOnly = false
 
