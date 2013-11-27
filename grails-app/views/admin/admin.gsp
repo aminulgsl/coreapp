@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="orosCapitalAdmin">
+    <meta name="layout" content="main">
     <title>OrosCapital - Admin</title>
     <style type="text/css">
 

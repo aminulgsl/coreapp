@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Dashboard - Ace Admin</title>
 
-    <meta name="description" content="overview &amp; stats" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="overview &amp; stats"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'bootstrap.min.css')}" type="text/css"/>
 
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'font-awesome.min.css')}" type="text/css"/>
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
 
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'ace.min.css')}" type="text/css"/>
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'ace-rtl.min.css')}" type="text/css"/>
@@ -22,7 +22,7 @@
 
 
     <!--inline styles related to this page-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <g:layoutHead/>
     <r:layoutResources/>
 </head>
@@ -31,12 +31,15 @@
 <body>
 <div class="navbar navbar-default" id="navbar">
 <script type="text/javascript">
-    try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+    try {
+        ace.settings.check('navbar', 'fixed')
+    } catch (e) {
+    }
 </script>
 
 <div class="navbar-container" id="navbar-container">
 <div class="navbar-header pull-left">
-    <a href="#" class="navbar-brand">
+    <a href="<g:createLink controller="home" action="index"/>" class="navbar-brand">
         <small>
             <i class="icon-leaf"></i>
             Oros Capital
@@ -197,7 +200,7 @@
 
         <li>
             <a href="#">
-                <img src="${resource(dir: 'images', file: 'avatar.png')}" class="msg-photo" alt="Alex's Avatar" />
+                <img src="${resource(dir: 'images', file: 'avatar.png')}" class="msg-photo" alt="Alex's Avatar"/>
                 <span class="msg-body">
                     <span class="msg-title">
                         <span class="blue">Alex:</span>
@@ -214,7 +217,7 @@
 
         <li>
             <a href="#">
-                <img src="${resource(dir: 'images', file: 'avatar3.png')}" class="msg-photo" alt="Susan's Avatar" />
+                <img src="${resource(dir: 'images', file: 'avatar3.png')}" class="msg-photo" alt="Susan's Avatar"/>
                 <span class="msg-body">
                     <span class="msg-title">
                         <span class="blue">Susan:</span>
@@ -231,7 +234,7 @@
 
         <li>
             <a href="#">
-                <img src="${resource(dir: 'images', file: 'avatar4.png')}" class="msg-photo" alt="Bob's Avatar" />
+                <img src="${resource(dir: 'images', file: 'avatar4.png')}" class="msg-photo" alt="Bob's Avatar"/>
                 <span class="msg-body">
                     <span class="msg-title">
                         <span class="blue">Bob:</span>
@@ -257,7 +260,7 @@
 
 <li class="light-blue">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-        <img class="nav-user-photo" src="${resource(dir: 'images', file: 'user.jpg')}" alt="Jason's Photo" />
+        <img class="nav-user-photo" src="${resource(dir: 'images', file: 'user.jpg')}" alt="Jason's Photo"/>
         <span class="user-info">
             <small>Welcome,</small>
             Jason
@@ -284,7 +287,7 @@
         <li class="divider"></li>
 
         <li>
-            <a href="#">
+            <a href="<g:createLink controller="logout" action="index"/>">
                 <i class="icon-off"></i>
                 Logout
             </a>
@@ -298,7 +301,10 @@
 
 <div class="main-container" id="main-container">
 <script type="text/javascript">
-    try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+    try {
+        ace.settings.check('main-container', 'fixed')
+    } catch (e) {
+    }
 </script>
 
 <div class="main-container-inner">
@@ -308,7 +314,10 @@
 
 <div class="sidebar" id="sidebar">
 <script type="text/javascript">
-    try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+    try {
+        ace.settings.check('sidebar', 'fixed')
+    } catch (e) {
+    }
 </script>
 
 <div class="sidebar-shortcuts" id="sidebar-shortcuts">
@@ -343,38 +352,43 @@
 
 <ul class="nav nav-list">
 <li class="active">
-    <a href="index.html">
+    <a href="<g:createLink controller="home" action="index"/>">
         <i class="icon-dashboard"></i>
-        <span class="menu-text"> Dashboard </span>
+        <span class="menu-text">Dashboard</span>
     </a>
 </li>
 
 <li>
 
-
-    <a href="<g:createLink controller="client"  action="index"/>"  class="dropdown-toggle">
+    <a href="<g:createLink controller="client" action="index"/>" class="dropdown-toggle">
         <i class="icon-text-width"></i>
-        <span class="menu-text"> Clients </span>
+        <span class="menu-text">Clients</span>
         <b class="arrow icon-angle-down"></b>
     </a>
     <ul class="submenu">
         <li>
-            <a href="<g:createLink controller="client"  action="newClient"/>">
+            <a href="<g:createLink controller="client" action="index"/>">
+                <i class="icon-double-angle-right"></i>
+                Client List
+            </a>
+        </li>
+        <li>
+            <a href="<g:createLink controller="client" action="newClient"/>">
                 <i class="icon-double-angle-right"></i>
                 New Client
             </a>
         </li>
+    </ul>
 
-       </ul>
 </li>
 
 <li>
     <a href="<g:createLink controller="admin" action="index"/>">
         <i class="icon-desktop"></i>
-        <span class="menu-text"> Admin </span>
+        <span class="menu-text">Admin</span>
     </a>
 
-    <ul class="submenu">
+    %{--<ul class="submenu">
         <li>
             <a href="elements.html">
                 <i class="icon-double-angle-right"></i>
@@ -452,13 +466,13 @@
                 </li>
             </ul>
         </li>
-    </ul>
+    </ul>--}%
 </li>
 
-<li>
+%{--<li>
     <a href="#" class="dropdown-toggle">
         <i class="icon-list"></i>
-        <span class="menu-text"> Tables </span>
+        <span class="menu-text">Tables</span>
 
         <b class="arrow icon-angle-down"></b>
     </a>
@@ -478,12 +492,12 @@
             </a>
         </li>
     </ul>
-</li>
+</li>--}%
 
-<li>
+%{--<li>
     <a href="#" class="dropdown-toggle">
         <i class="icon-edit"></i>
-        <span class="menu-text"> Forms </span>
+        <span class="menu-text">Forms</span>
 
         <b class="arrow icon-angle-down"></b>
     </a>
@@ -517,16 +531,16 @@
             </a>
         </li>
     </ul>
-</li>
+</li>--}%
 
-<li>
+%{--<li>
     <a href="widgets.html">
         <i class="icon-list-alt"></i>
-        <span class="menu-text"> Widgets </span>
+        <span class="menu-text">Widgets</span>
     </a>
-</li>
+</li>--}%
 
-<li>
+%{--<li>
     <a href="calendar.html">
         <i class="icon-calendar"></i>
 
@@ -537,19 +551,19 @@
             </span>
         </span>
     </a>
-</li>
+</li>--}%
 
-<li>
+%{--<li>
     <a href="gallery.html">
         <i class="icon-picture"></i>
-        <span class="menu-text"> Gallery </span>
+        <span class="menu-text">Gallery</span>
     </a>
-</li>
+</li>--}%
 
-<li>
+%{--<li>
     <a href="#" class="dropdown-toggle">
         <i class="icon-tag"></i>
-        <span class="menu-text"> More Pages </span>
+        <span class="menu-text">More Pages</span>
 
         <b class="arrow icon-angle-down"></b>
     </a>
@@ -597,7 +611,7 @@
             </a>
         </li>
     </ul>
-</li>
+</li>--}%
 
 <li>
     <a href="#" class="dropdown-toggle">
@@ -655,7 +669,10 @@
 </div>
 
 <script type="text/javascript">
-    try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+    try {
+        ace.settings.check('sidebar', 'collapsed')
+    } catch (e) {
+    }
 </script>
 </div>
 
@@ -680,27 +697,27 @@
         </div>
 
         <div>
-            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
-            <label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar"/>
+            <label class="lbl" for="ace-settings-navbar">Fixed Navbar</label>
         </div>
 
         <div>
-            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
-            <label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar"/>
+            <label class="lbl" for="ace-settings-sidebar">Fixed Sidebar</label>
         </div>
 
         <div>
-            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
-            <label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs"/>
+            <label class="lbl" for="ace-settings-breadcrumbs">Fixed Breadcrumbs</label>
         </div>
 
         <div>
-            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
-            <label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl"/>
+            <label class="lbl" for="ace-settings-rtl">Right To Left (rtl)</label>
         </div>
 
         <div>
-            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container" />
+            <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container"/>
             <label class="lbl" for="ace-settings-add-container">
                 Inside
                 <b>.container</b>
@@ -731,7 +748,7 @@
 
 <script type="text/javascript">
 
-    window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-2.0.3.min.js')}'>"+"<"+"/script>");
+    window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-2.0.3.min.js')}'>" + "<" + "/script>");
 </script>
 
 <!-- <![endif]-->
@@ -744,7 +761,7 @@
 <![endif]-->
 
 <script type="text/javascript">
-    if("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'mobile.custom.min.js')}'>"+"<"+"/script>");
+    if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'mobile.custom.min.js')}'>" + "<" + "/script>");
 </script>
 <script src="${resource(dir: 'js/resource/', file: 'bootstrap.min.js')}"></script>
 
@@ -773,8 +790,8 @@
 <!-- inline scripts related to this page -->
 
 <script type="text/javascript">
-    jQuery(function($) {
-        $('.easy-pie-chart.percentage').each(function(){
+    jQuery(function ($) {
+        $('.easy-pie-chart.percentage').each(function () {
             var $box = $(this).closest('.infobox');
             var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
             var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
@@ -784,35 +801,34 @@
                 trackColor: trackColor,
                 scaleColor: false,
                 lineCap: 'butt',
-                lineWidth: parseInt(size/10),
+                lineWidth: parseInt(size / 10),
                 animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
                 size: size
             });
         })
 
-        $('.sparkline').each(function(){
+        $('.sparkline').each(function () {
             var $box = $(this).closest('.infobox');
             var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
-            $(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+            $(this).sparkline('html', {tagValuesAttribute: 'data-values', type: 'bar', barColor: barColor, chartRangeMin: $(this).data('min') || 0});
         });
 
 
-
-
-        var placeholder = $('#piechart-placeholder').css({'width':'90%' , 'min-height':'150px'});
+        var placeholder = $('#piechart-placeholder').css({'width': '90%', 'min-height': '150px'});
         var data = [
-            { label: "social networks",  data: 38.7, color: "#68BC31"},
-            { label: "search engines",  data: 24.5, color: "#2091CF"},
-            { label: "ad campaigns",  data: 8.2, color: "#AF4E96"},
-            { label: "direct traffic",  data: 18.6, color: "#DA5430"},
-            { label: "other",  data: 10, color: "#FEE074"}
+            { label: "social networks", data: 38.7, color: "#68BC31"},
+            { label: "search engines", data: 24.5, color: "#2091CF"},
+            { label: "ad campaigns", data: 8.2, color: "#AF4E96"},
+            { label: "direct traffic", data: 18.6, color: "#DA5430"},
+            { label: "other", data: 10, color: "#FEE074"}
         ]
+
         function drawPieChart(placeholder, data, position) {
             $.plot(placeholder, data, {
                 series: {
                     pie: {
                         show: true,
-                        tilt:0.8,
+                        tilt: 0.8,
                         highlight: {
                             opacity: 0.25
                         },
@@ -827,15 +843,15 @@
                     show: true,
                     position: position || "ne",
                     labelBoxBorderColor: null,
-                    margin:[-30,15]
-                }
-                ,
+                    margin: [-30, 15]
+                },
                 grid: {
                     hoverable: true,
                     clickable: true
                 }
             })
         }
+
         drawPieChart(placeholder, data);
 
         /**
@@ -846,28 +862,23 @@
         placeholder.data('draw', drawPieChart);
 
 
-
         var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
         var previousPoint = null;
 
         placeholder.on('plothover', function (event, pos, item) {
-            if(item) {
+            if (item) {
                 if (previousPoint != item.seriesIndex) {
                     previousPoint = item.seriesIndex;
-                    var tip = item.series['label'] + " : " + item.series['percent']+'%';
+                    var tip = item.series['label'] + " : " + item.series['percent'] + '%';
                     $tooltip.show().children(0).text(tip);
                 }
-                $tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+                $tooltip.css({top: pos.pageY + 10, left: pos.pageX + 10});
             } else {
                 $tooltip.hide();
                 previousPoint = null;
             }
 
         });
-
-
-
-
 
 
         var d1 = [];
@@ -886,7 +897,7 @@
         }
 
 
-        var sales_charts = $('#sales-charts').css({'width':'100%' , 'height':'220px'});
+        var sales_charts = $('#sales-charts').css({'width': '100%', 'height': '220px'});
         $.plot("#sales-charts", [
             { label: "Domains", data: d1 },
             { label: "Hosting", data: d2 },
@@ -910,7 +921,7 @@
             grid: {
                 backgroundColor: { colors: [ "#fff", "#fff" ] },
                 borderWidth: 1,
-                borderColor:'#555'
+                borderColor: '#555'
             }
         });
 
@@ -925,7 +936,7 @@
             var off2 = $source.offset();
             var w2 = $source.width();
 
-            if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+            if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
             return 'left';
         }
 
@@ -938,29 +949,29 @@
         //Android's default browser somehow is confused when tapping on label which will lead to dragging the task
         //so disable dragging when clicking on label
         var agent = navigator.userAgent.toLowerCase();
-        if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
-            $('#tasks').on('touchstart', function(e){
+        if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+            $('#tasks').on('touchstart', function (e) {
                 var li = $(e.target).closest('#tasks li');
-                if(li.length == 0)return;
+                if (li.length == 0)return;
                 var label = li.find('label.inline').get(0);
-                if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+                if (label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation();
             });
 
         $('#tasks').sortable({
-                    opacity:0.8,
-                    revert:true,
-                    forceHelperSize:true,
+                    opacity: 0.8,
+                    revert: true,
+                    forceHelperSize: true,
                     placeholder: 'draggable-placeholder',
-                    forcePlaceholderSize:true,
-                    tolerance:'pointer',
-                    stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+                    forcePlaceholderSize: true,
+                    tolerance: 'pointer',
+                    stop: function (event, ui) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
                         $(ui.item).css('z-index', 'auto');
                     }
                 }
         );
         $('#tasks').disableSelection();
-        $('#tasks input:checkbox').removeAttr('checked').on('click', function(){
-            if(this.checked) $(this).closest('li').addClass('selected');
+        $('#tasks input:checkbox').removeAttr('checked').on('click', function () {
+            if (this.checked) $(this).closest('li').addClass('selected');
             else $(this).closest('li').removeClass('selected');
         });
 
@@ -968,7 +979,7 @@
     })
 </script>
 <g:javascript library="application"/>
-<r:layoutResources />
+<r:layoutResources/>
 </body>
 
 </html>
