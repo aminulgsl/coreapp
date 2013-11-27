@@ -18,7 +18,7 @@ environments {
             url = "jdbc:mysql://localhost:3306/oroscapital"
             logSql = true
             username = "root"
-            password = ""
+            password = "root"
 
             properties {
                 maxActive = 50
