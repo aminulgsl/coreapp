@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <!-- PAGE CONTENT BEGINS -->
-                    %{--<g:layoutBody/>--}%
+                    <g:layoutBody/>
                     <!-- PAGE CONTENT ENDS -->
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -145,6 +145,7 @@
     if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery.mobile.custom.min.js')}'>" + "<" + "/script>");
 </script>
 <script src="${resource(dir: 'js/resource/', file: 'bootstrap.min.js')}"></script>
+<script src="${resource(dir: 'js/validation/', file: 'jquery.validate.min.js')}"></script>
 
 <script src="${resource(dir: 'js/resource/', file: 'typeahead-bs2.min.js')}"></script>
 

@@ -72,14 +72,14 @@
 
     <ul class="submenu">
         <li>
-            <a href="<g:createLink controller="admin" action="index"/>">
+            <a href="<g:createLink controller="client" action="index"/>">
                 <i class="icon-double-angle-right"></i>
                 Elements
             </a>
         </li>
 
         <li>
-            <a href="<g:createLink controller="admin" action="index"/>">
+            <a href="<g:createLink controller="client" action="newClient"/>">
                 <i class="icon-double-angle-right"></i>
                 Buttons &amp; Icons
             </a>
