@@ -11,4 +11,14 @@ class ManageUserController {
     def show(){
         render(view:'show')
     }
+    @Secured(['ROLE_SUPER_ADMIN'])
+    def newUser() {
+        String action = this.actionName;
+        println(this.controllerName)
+        render(view: "createnewuser", model: ["action": action]);
+    }
+    @Secured(['ROLE_SUPER_ADMIN'])
+    def createRole(){
+        render(view: "createRole");
+    }
 }

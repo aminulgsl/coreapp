@@ -16,18 +16,7 @@
 <body>
 %{--<g:render template="/breadcumb" model="${[myparams:['home','www', 'eeee']]}" />--}%
 <div class="page-header">
-    <ul class="list-inline">
-        <li>
-            <i class="icon-home home-icon"></i>
-            <a href="#"></a>
-        </li>
-
-        <li>
-            <a href="#">Other Pages</a>
-        </li>
-        <li class="active">Blank Page</li>
-    </ul><!-- .breadcrumb -->
+    <g:render template='manageusertopmenu'/>
 </div><!-- /.page-header -->
-
 </body>
 </html>
