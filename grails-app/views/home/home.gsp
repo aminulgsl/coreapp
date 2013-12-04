@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="test">
+    <meta name="layout" content="main">
     <title>OrosCapital - Client</title>
 
     <r:script>
@@ -567,7 +567,7 @@
 <div class="clearfix">
 <div class="itemdiv memberdiv">
     <div class="user">
-        <img alt="Bob Doe's avatar" src="${resource(dir: 'images', file: 'user.jpg')}" />
+        <img alt="Bob Doe's avatar" src="${resource(dir: 'images', file: 'user.png')}" />
     </div>
 
     <div class="body">
@@ -1086,7 +1086,7 @@
 
                     <div class="itemdiv dialogdiv">
                         <div class="user">
-                            <img alt="Bob's Avatar" src="${resource(dir: 'images', file: 'user.jpg')}" />
+                            <img alt="Bob's Avatar" src="${resource(dir: 'images', file: 'user.png')}" />
                         </div>
 
                         <div class="body">
