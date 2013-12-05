@@ -39,7 +39,7 @@
                                              <g:message code="springSecurity.login.header.insert.information" default="Please Enter Your Information"/>
                                         </h4>
 
-                                       <p class="help-block"><g:if test='${flash.message}'>  <div class='login_message alert-danger '> <i class="icon-bell red"> <b> ${flash.message} </b> </i></div> </g:if> </p>
+                                       <h5 class="help-block"><g:if test='${flash.message}'>  <div class='login_message alert-danger '> <i class="icon-bell red"> <b> ${flash.message} </b> </i></div> </g:if> </h5>
 
 
                                         <div class="space-6"></div>
@@ -51,7 +51,7 @@
                                                 <label for='username' class=" control-label"><g:message code="springSecurity.login.username.label" default="User Name"/>:</label>
                                              <div class=" ">
                                              <span class="block input-icon input-icon-right ">
-                                                    <input type="text" class="text_ span12 form-control" name='j_username' id='username' placeholder="Username"   />
+                                                    <input type="text" class="text_ span12 form-control required" name='j_username' id='username' placeholder="Username"   />
                                                     <i class="icon-user"></i>
 
                                                 </span>
@@ -64,7 +64,7 @@
                                             <label for='password' class=" control-label"><g:message code="springSecurity.login.password.label" default="Password"/>:</label>
                                                 <div class="">
                                                  <span class="block input-icon input-icon-right">
-                                                    <input type="password" class="text_ span12 form-control" placeholder="Password" name='j_password' id='password' />
+                                                    <input type="password" class="text_ span12 form-control required" placeholder="Password" name='j_password' id='password' />
                                                     <i class="icon-lock"></i>
                                                  </span>
                                                 </div>
@@ -80,11 +80,11 @@
 
 
 
-                                                    <button type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'  class="width-35 pull-right btn btn-small btn-primary" >
-                                                    <i class="icon-key"></i>
-                                                    Login
-                                                    </button>
-
+                                                    %{--<button type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'  class="width-35 pull-right btn btn-small btn-primary" >--}%
+                                                    %{--<i class="icon-key"></i>--}%
+                                                    %{--Login--}%
+                                                    %{--</button>--}%
+                                                    <input type="submit" value="Submit" name="submit" class="width-35 pull-right btn btn-small btn-primary" id="submit" />
 
 
 
@@ -135,6 +135,11 @@
 		document.forms['loginForm'].elements['j_username'].focus();
 	})();
 	// -->
+
 </script>
+
+
+
+
 </body>
 </html>

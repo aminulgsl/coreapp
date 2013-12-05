@@ -49,16 +49,16 @@
 
 <ul class="nav nav-list">
 <li>
-    <a href="index.html">
+    <a href="<g:createLink controller="home" action="index"/>">
         <i class="icon-dashboard"></i>
         <span class="menu-text"> Dashboard </span>
     </a>
 </li>
 
 <li>
-    <a href="typography.html">
+    <a href="<g:createLink controller="manageUser" action="show"/>">
         <i class="icon-text-width"></i>
-        <span class="menu-text"> Typography </span>
+        <span class="menu-text"> Manage User </span>
     </a>
 </li>
 
