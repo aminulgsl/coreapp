@@ -18,8 +18,8 @@
 <div class="page-header">
     <ul class="list-inline">
         <li>
-            <i class="icon-home home-icon"></i>
-            <a href="#"></a>
+            %{--<i class="icon-home home-icon"></i>--}%
+            <a href="#">Create User</a>
         </li>
 
         <li>
