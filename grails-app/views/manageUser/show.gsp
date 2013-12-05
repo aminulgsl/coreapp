@@ -14,15 +14,19 @@
 </head>
 
 <body>
-<g:render template="/breadcumb" model="${[myparams:['home','www', 'eeee']]}" />
+%{--<g:render template="/breadcumb" model="${[myparams:['home','www', 'eeee']]}" />--}%
 <div class="page-header">
-    <h1>
-        Dashboard
-        <small>
-            <i class="icon-double-angle-right"></i>
-            overview &amp; stats
-        </small>
-    </h1>
+    <ul class="list-inline">
+        <li>
+            <i class="icon-home home-icon"></i>
+            <a href="#"></a>
+        </li>
+
+        <li>
+            <a href="#">Other Pages</a>
+        </li>
+        <li class="active">Blank Page</li>
+    </ul><!-- .breadcrumb -->
 </div><!-- /.page-header -->
 
 </body>
