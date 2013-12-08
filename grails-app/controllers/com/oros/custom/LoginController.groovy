@@ -69,6 +69,13 @@ class LoginController {
 		render view: view, model: [postUrl: postUrl,
 		                           rememberMeParameter: config.rememberMe.parameter]
 	}
+
+    def submit() {
+        println params
+        response.setStatus(HttpServletResponse.SC_TEMPORARY_REDIRECT);
+        redirect(uri: "/j_spring_security_check", params: params)
+//         redirect()
+    }
     def loginSuccess(){
         redirect(controller: 'home', action: 'index')
     }

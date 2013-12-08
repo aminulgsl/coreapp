@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Dashboard - Ace Admin</title>
+    <title>OrosCapital - Login</title>
 
     <meta name="description" content="overview &amp; stats"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -64,7 +64,7 @@
 
 
 <script type="text/javascript">
-    if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'mobile.custom.min.js')}'>" + "<" + "/script>");
+    if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery.mobile.custom.min.js')}'>" + "<" + "/script>");
 </script>
 <script src="${resource(dir: 'js/resource/', file: 'bootstrap.min.js')}"></script>
 

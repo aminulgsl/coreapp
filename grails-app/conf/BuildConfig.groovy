@@ -43,7 +43,7 @@ grails.project.dependency.resolution = {
         grailsCentral()
         mavenCentral()
         // uncomment these (or add new ones) to enable remote dependency resolution from public Maven repositories
-        //mavenRepo "http://repository.codehaus.org"
+        mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
         mavenRepo "http://repo.spring.io/milestone/"
@@ -52,6 +52,12 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         runtime 'mysql:mysql-connector-java:5.1.24'
+        runtime('org.codehaus.groovy.modules.http-builder:http-builder:0.6') {
+//        runtime('org.codehaus.groovy.modules.http-builder:http-builder-0.6') {
+            excludes 'xalan'
+            excludes 'xml-apis'
+            excludes 'groovy'
+        }
     }
 
     plugins {
@@ -72,6 +78,7 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.1"
         //runtime ":yui-minify-resources:0.1.5"
         compile ":spring-security-core:2.0-RC2"
-        compile ':rest-client-builder:2.0.0'
+//        compile ':rest-client-builder:2.0.0'
+//        compile ":rest:0.8"
     }
 }
