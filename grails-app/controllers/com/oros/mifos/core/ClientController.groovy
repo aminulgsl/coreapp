@@ -13,4 +13,9 @@ class ClientController {
     {
         render(view: 'newClient');
     }
+    @Secured(['ROLE_SUPER_ADMIN'])
+    def list()
+    {
+        render(view: 'client');
+    }
 }

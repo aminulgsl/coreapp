@@ -63,7 +63,7 @@
 </li>
 
 <li>
-    <a href="#" class="dropdown-toggle">
+    <a href="<g:createLink controller="client" action="list"/>" class="dropdown-toggle">
         <i class="icon-desktop"></i>
         <span class="menu-text"> UI Elements </span>
 
