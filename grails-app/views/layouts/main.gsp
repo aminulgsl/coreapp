@@ -65,7 +65,7 @@
     <span class="menu-text"></span>
 </a>
 
-<g:render template='/leftnavbar'/>
+    <g:render template='/leftnavbar'/>
 
     <div class="main-content">
 
@@ -169,6 +169,12 @@
 <script src="${resource(dir: 'js/resource/', file: 'jquery.flot.pie.min.js')}"></script>
 <script src="${resource(dir: 'js/resource/', file: 'jquery.flot.resize.min.js')}"></script>
 
+
+<script src="${resource(dir: 'js/resource', file: 'fuelux.wizard.min.js')}"></script>
+<script src="${resource(dir: 'js/resource', file: 'additional-methods.min.js')}"></script>
+<script src="${resource(dir: 'js/resource', file: 'bootbox.min.js')}"></script>
+<script src="${resource(dir: 'js/resource', file: 'jquery.maskedinput.min.js')}"></script>
+<script src="${resource(dir: 'js/resource', file: 'select2.min.js')}"></script>
 <!-- ace scripts -->
 
 <script src="${resource(dir: 'js/resource/', file: 'ace-elements.min.js')}"></script>

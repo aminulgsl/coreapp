@@ -6,12 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+
 <div class="sidebar" id="sidebar">
 <script type="text/javascript">
     try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
@@ -179,16 +174,16 @@
 <li>
     <a href="#" class="dropdown-toggle">
         <i class="icon-edit"></i>
-        <span class="menu-text"> Forms </span>
+        <span class="menu-text"> Account </span>
 
         <b class="arrow icon-angle-down"></b>
     </a>
 
     <ul class="submenu">
         <li>
-            <a href="form-elements.html">
+            <a href="<g:createLink controller="account" action="show"/>">
                 <i class="icon-double-angle-right"></i>
-                Form Elements
+                Account List
             </a>
         </li>
 
@@ -354,6 +349,3 @@
     try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
 </script>
 </div>
-
-</body>
-</html>
