@@ -24,6 +24,6 @@ class ManageUserController {
 
     @Secured(['ROLE_SUPER_ADMIN'])
     def newUserCreate(){
-      render (view: 'newuser')
+      render (view: 'newusercreat')
     }
 }

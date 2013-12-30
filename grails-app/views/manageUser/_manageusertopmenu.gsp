@@ -10,7 +10,11 @@
     </li>
     <li>
         <a href="<g:createLink controller="manageUser" action="createRole"/>">Create Role</a>
-    </li><li>
+    </li>
+    <li>
         <a href="#">Manage Role</a>
+    </li>
+    <li>
+        <a href="<g:createLink controller="manageUser" action="newUserCreate"/>">Create User</a>
     </li>
 </ul>

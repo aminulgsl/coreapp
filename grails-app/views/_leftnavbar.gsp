@@ -81,9 +81,9 @@
         </li>
 
         <li>
-            <a href="<g:createLink controller="manageUser" action="newUserCreate"/>">
+            <a href="#">
                 <i class="icon-double-angle-right"></i>
-                CreateUserByFormWizard
+                Treeview
             </a>
         </li>
 
