@@ -9,27 +9,23 @@
 
 <body >
 
-<div class="main-container container-fluid">
+<div class="main-container container">
     <div class="main-content">
-        <div class="row-fluid">
+        <div class="row">
             <div class="span12">
                 <div class="login-container">
-                    <div class="row-fluid">
+                    <div class="row">
                         <div class="center">
                             <h1>
                                 <i class="icon-leaf green"></i>
                                 <span class="red"><g:message code="springSecurity.login.header.title" default="OrosCapital"/></span>
-                                %{--<span class="white"><g:message code="springSecurity.login.header" default=""/></span>--}%
-
-
                             </h1>
-                            %{--<h4 class="blue">&copy; <g:message code="springSecurity.login.header.company" default="Company Name"/></h4>--}%
                         </div>
                     </div>
 
                     <div class="space-6"></div>
 
-                    <div class="row-fluid">
+                    <div class="row">
                         <div class="position-relative">
                             <div id="login-box" class="login-box visible widget-box no-border">
                                 <div class="widget-body">
@@ -41,11 +37,9 @@
 
                                        <h5 class="help-block"><g:if test='${flash.message}'>  <div class='login_message alert-danger '> <i class="icon-bell red"> <b> ${flash.message} </b> </i></div> </g:if> </h5>
 
-
                                         <div class="space-6"></div>
 
                                         <form action='${postUrl}' method='POST' id='loginForm' class='cssform ' autocomplete='off'>
-                                            %{--<form action='${resource(dir:'login', file:'submit')}' method='POST' id='loginForm' class='cssform' autocomplete='off'>--}%
                                             <fieldset>
                                             <div class="form-group">
                                                 <label for='username' class=" control-label"><g:message code="springSecurity.login.username.label" default="User Name"/>:</label>
@@ -77,25 +71,11 @@
                                                     <input type='checkbox' class='chk' name='${rememberMeParameter}' id='remember_me' <g:if test='${hasCookie}'>checked='checked'</g:if>/
                                                         <span class="lbl"> <label for='remember_me'><g:message code="springSecurity.login.remember.me.label" default="Remember Me"/></label></span>
                                                     </label>
-
-
-
-                                                    %{--<button type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'  class="width-35 pull-right btn btn-small btn-primary" >--}%
-                                                    %{--<i class="icon-key"></i>--}%
-                                                    %{--Login--}%
-                                                    %{--</button>--}%
                                                     <input type="submit" value="Submit" name="submit" class="width-35 pull-right btn btn-small btn-primary" id="submit" />
-
-
-
-
                                                 </div>
-
                                                 <div class="space-4"></div>
                                             </fieldset>
                                         </form>
-
-
                                     </div><!--/widget-main-->
 
                                     <div class="toolbar clearfix">
@@ -105,7 +85,6 @@
                                                 I forgot my password
                                             </a>
                                         </div>
-
                                         <div>
                                             <a href="#"  class="user-signup-link">
                                                 I want to register
@@ -115,17 +94,12 @@
                                     </div>
                                 </div><!--/widget-body-->
                             </div><!--/login-box-->
-
                         </div><!--/login-box-->
-
-
-
-
                     </div><!--/position-relative-->
                 </div>
             </div>
         </div><!--/.span-->
-    </div><!--/.row-fluid-->
+    </div><!--/.row-->
 </div>
 
 
@@ -138,7 +112,54 @@
 
 </script>
 
+<r:script>
+    jQuery(function ($) {
 
+        $('#loginForm').validate({
+
+            errorElement: 'div',
+            errorClass: 'help-block',
+            focusInvalid: false,
+            rules: {
+                j_username: {
+                    required: true
+//                        email:true
+                },
+                j_password: {
+                    required: true,
+                    minlength: 5
+                }
+            } ,
+            messages: {
+                j_username: {
+                    required: "Please provide your user name"
+//                        email: "User name not valid."
+                },
+                j_password: {
+                    required: "Please specify a password.",
+                    minlength: "Password not valid."
+                }
+            },
+            invalidHandler: function (event, validator) { //display error alert on form submit
+                $('.alert-danger', $('.loginForm')).show();
+            },
+
+            highlight: function (e) {
+                $(e).closest('.form-group').removeClass('has-info').addClass('has-error');
+            },
+
+            success: function (e) {
+                $(e).closest('.form-group').removeClass('has-error').addClass('has-info');
+                $(e).remove();
+            }
+
+
+
+        });
+
+    })
+
+</r:script>
 
 
 </body>

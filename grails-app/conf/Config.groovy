@@ -86,15 +86,10 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
-        mifosx.platform.url ="https://192.168.10.156:8443/mifosng-provider/api/"
-        mifosx.platform.tenantStr ="tenantIdentifier"
-        mifosx.platform.tenantName ="default"
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
-        mifosx.platform.url ="https://192.168.10.156:8443/mifosng-provider/api/"
-        mifosx.platform.tenantName ="default"
     }
 }
 
@@ -121,11 +116,10 @@ log4j = {
 
 
 // Added by the Spring Security Core plugin:
-grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.oros.custom.OrosUser'
-grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.oros.custom.OrosUserOrosRole'
-grails.plugin.springsecurity.authority.className = 'com.oros.custom.OrosRole'
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.oros.custom.AppUser'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.oros.custom.AppUserRole'
+grails.plugin.springsecurity.authority.className = 'com.oros.custom.Role'
 grails.plugin.springsecurity.requestMap.className = 'com.oros.custom.Requestmap'
-grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],
@@ -139,7 +133,6 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/login/loginSuccess'
 grails.plugin.springsecurity.successHandler.alwaysUseDefault = true
 //grails.plugin.springsecurity.rejectIfNoRule = false
-//grails.plugin.springsecurity.fii.rejectPublicInvocations = true
 grails.plugin.springsecurity.securityConfigType = "Annotation"
 //grails.plugin.springsecurity.securityConfigType = 'Requestmap'
 

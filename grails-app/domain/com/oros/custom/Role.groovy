@@ -1,6 +1,6 @@
 package com.oros.custom
 
-class OrosRole {
+class Role {
 
 	String authority
 

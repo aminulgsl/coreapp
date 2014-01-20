@@ -1,6 +1,6 @@
 package com.oros.custom
 
-class OrosUser {
+class AppUser {
 
 	transient springSecurityService
 
@@ -22,8 +22,8 @@ class OrosUser {
 		password column: '`password`'
 	}
 
-	Set<OrosRole> getAuthorities() {
-		OrosUserOrosRole.findAllByOrosUser(this).collect { it.orosRole } as Set
+	Set<Role> getAuthorities() {
+		AppUserRole.findByAppUser(this).collect { it.role } as Set
 	}
 
 	def beforeInsert() {

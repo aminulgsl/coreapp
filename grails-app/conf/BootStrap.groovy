@@ -1,6 +1,8 @@
-import com.oros.custom.OrosRole
-import com.oros.custom.OrosUser
-import com.oros.custom.OrosUserOrosRole
+import com.oros.custom.AppUser
+import com.oros.custom.Role
+import com.oros.custom.AppUser
+import com.oros.custom.AppUserRole
+import com.oros.custom.Role
 
 class BootStrap {
 
@@ -8,18 +10,18 @@ class BootStrap {
         createUserWithRole()
     }
     void createUserWithRole(){
-        OrosRole superAdmin = OrosRole.findByAuthority("ROLE_SUPER_ADMIN")
+        Role superAdmin = Role.findByAuthority("ROLE_SUPER_ADMIN")
         if(!superAdmin){
-            superAdmin = new OrosRole(authority: 'ROLE_SUPER_ADMIN').save(flush: true)
+            superAdmin = new Role(authority: 'ROLE_SUPER_ADMIN').save(flush: true)
 //            superAdmin.id = 100; superAdmin.save(flush: true)
         }
 
-        OrosUser mifosUser = OrosUser.findByUsername('mifos')
+        AppUser mifosUser = AppUser.findByUsername('admin')
         if(!mifosUser){
-            mifosUser = new OrosUser(username: 'mifos', password: 'password', enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false)
+            mifosUser = new AppUser(username: 'admin', password: 'password', enabled: true, accountExpired: false, accountLocked: false, passwordExpired: false)
             mifosUser.save(flush: true)
 
-            new OrosUserOrosRole(orosUser: mifosUser, orosRole: superAdmin).save(flush: true)
+            new AppUserRole(appUser: mifosUser, role: superAdmin).save(flush: true)
         }
 
     }

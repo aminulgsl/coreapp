@@ -9,17 +9,13 @@
 
 
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'bootstrap.min.css')}" type="text/css"/>
-
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'font-awesome.min.css')}" type="text/css"/>
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300"/>
 
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'ace.min.css')}" type="text/css"/>
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'ace-rtl.min.css')}" type="text/css"/>
     <link rel="stylesheet" href="${resource(dir: 'css/resource', file: 'ace-skins.min.css')}" type="text/css"/>
-
     <script src="${resource(dir: 'js/resource/', file: 'ace-extra.min.js')}"></script>
-
 
     <!--inline styles related to this page-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -120,45 +116,24 @@
 
 <!-- basic scripts -->
 
-<!--[if !IE]> -->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-2.0.3.min.js')}'>" + "<" + "/script>");
+    </script>
+    <!-- <![endif]-->
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!--[if IE]>
+    <script type="text/javascript">
+     window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-1.10.2.min.js')}'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
 
-<!-- <![endif]-->
-
-<!--[if IE]>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<![endif]-->
-
-<!--[if !IE]> -->
-
-<script type="text/javascript">
-
-    window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-2.0.3.min.js')}'>" + "<" + "/script>");
-</script>
-
-<!-- <![endif]-->
-
-<!--[if IE]>
-<script type="text/javascript">
-
- window.jQuery || document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery-1.10.2.min.js')}'>"+"<"+"/script>");
-</script>
-<![endif]-->
-
-<script type="text/javascript">
-    if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery.mobile.custom.min.js')}'>" + "<" + "/script>");
-</script>
-
-
-
-
-
-<!-- page specific plugin scripts -->
-
-<!--[if lte IE 8]>
-		  <script src="${resource(dir: 'js/resource/', file: 'excanvas.min.js')}"></script>
-		<![endif]-->
+    <script type="text/javascript">
+        if ("ontouchend" in document) document.write("<script src='${resource(dir: 'js/resource/', file: 'jquery.mobile.custom.min.js')}'>" + "<" + "/script>");
+    </script>
+    <!--[if lte IE 8]>
+      <script src="${resource(dir: 'js/resource/', file: 'excanvas.min.js')}"></script>
+    <![endif]-->
 
 <script src="${resource(dir: 'js/resource/', file: 'jquery-ui-1.10.3.custom.min.js')}"></script>
 <script src="${resource(dir: 'js/resource/', file: 'jquery.ui.touch-punch.min.js')}"></script>

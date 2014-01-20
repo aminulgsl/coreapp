@@ -15,7 +15,7 @@ environments {
         dataSource {
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://localhost:3306/oroscapital"
+            url = "jdbc:mysql://localhost:3306/coreapp"
             logSql = true
             username = "root"
             password = "root"
@@ -42,7 +42,7 @@ environments {
             pooled = true
             dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "com.mysql.jdbc.Driver"
-            url = "jdbc:mysql://127.0.0.1:3306/oroscapital"
+            url = "jdbc:mysql://127.0.0.1:3306/coreapp"
             username = "root"
             password = "root"
 
