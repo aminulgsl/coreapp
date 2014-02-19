@@ -62,11 +62,5 @@ class BootStrap {
         }
     }
     def destroy = {
-        String description
-        String menuText
-        String requestUrl
-        String controllerName
-        String actionName
-        String status
     }
 }
