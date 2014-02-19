@@ -13,7 +13,7 @@ class BootStrap {
         createUserWithRole()
         createModuleEntry()
         createFeatureEntry()
-        createFeventsEntry()
+
     }
 
     void createUserWithRole() {
@@ -77,13 +77,7 @@ class BootStrap {
         }
     }
 
-    void createFeventsEntry(){
-       Feature createUserFeatures=Feature.findByName('userManagement')
-        if(createUserFeatures){
-            def create=new Feature(name: 'create', description: 'create', femenuText: 'Create', requestUrl: '/userManagement/user', controllerName: 'userManagement', actionName: 'user', status: true)
-            createUserFeatures.addToFevents(create).save(flush: true)
-        }
-    }
+
     def destroy = {
     }
 }
